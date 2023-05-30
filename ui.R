@@ -1,13 +1,6 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
 
-#library(shiny)
+
+library(shiny)
 library(shinydashboard)
 library(markdown)
 library(thematic)
@@ -35,7 +28,6 @@ inactivity <- "function idleTimer() {
 }
 idleTimer();"
 
-rsconnect::setAccountInfo(name='emily-nolan', token='5512FE9BA4A9A1EF27F99C5603CF4AF1', secret='ROzEuf1D6+cJTYXix0R3CsbvCEnzMXxoKIu2pzI/')
 
 data <- read.csv("StaffingDataSet.csv")
 data <- data[rowSums(is.na(data))==0,]
@@ -126,6 +118,4 @@ that Covid-19 may have had an impact on staffing levels.")),
              ))
   #leafletOutput("mymap")
 )
-
-deployApp()
 
