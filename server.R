@@ -147,13 +147,7 @@ server <- function(input, output) {
       axis(1, at=1:5, labels=largepopavg$years)
       lines(largepopavg$means,xlim=range(largepopavg$means), pch=16)
     }})
-  output$mymap <- renderLeaflet({
-    leaflet(
-      addProviderTiles(providers$Stamen.TonerLite,options = providerTileOptions(noWrap = TRUE)), 
-      addMarkers(data = points()))
-  })
   
-}
 
 
 
