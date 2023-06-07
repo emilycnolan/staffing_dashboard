@@ -1,3 +1,5 @@
+library(shiny)
+
 data <- read.csv("StaffingDataSet.csv")
 data <- data[rowSums(is.na(data))==0,]
 data$Median.Household.Income <- as.numeric(gsub("\\$","", gsub(",","", 
